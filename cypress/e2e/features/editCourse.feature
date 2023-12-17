@@ -10,5 +10,3 @@ Given A user is logged in and on the Edit Course page
 When The user provides the necessary mandatory details to edit the course _Title, Descritpion, Category, Location_ and submits the form
 Then Success notification toast should be displayed and user should be directed back to the View Course page
 
-
-//Scenario: To verify every section of the Course card is clickable

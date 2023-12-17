@@ -9,7 +9,8 @@ Given ("A user is logged in and on the View Course page", () => {
 });
 
 When ("The user clicks on the Delete button", () => {
-    cy.get('.css-wvpqgg')//.click();
+    cy.get('.css-wvpqgg').click();
+    cy.get('.MuiBox-root > .MuiButton-contained').click();
 });
 
 Then ("Success notification toast should be displayed and user should be directed back to the List of Courses page", () => {
