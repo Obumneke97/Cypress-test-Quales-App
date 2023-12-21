@@ -11,7 +11,7 @@ dist/
 cypress.env.json
 
 # If you want to ignore the entire cypress directory, you can use:
-cypress/
+#cypress/
 
 # Compiled Java class files
 *.class
