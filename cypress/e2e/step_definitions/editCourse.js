@@ -10,7 +10,7 @@ Given ("A user is logged in", () => {
 
 When ("User selects or clicks on a course from the list and proceeds to click the Edit button", () => {
     cy.viewport('macbook-16');
-    cy.get(':nth-child(9) > .MuiCardContent-root > .MuiTypography-body1').click();//course name is try try try
+    cy.get(':nth-child(3) > .MuiCardContent-root > .MuiTypography-body1').click();//course name is try try try
     cy.get('.css-klop1v').click();
 });
 

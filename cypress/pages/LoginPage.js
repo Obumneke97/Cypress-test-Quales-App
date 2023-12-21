@@ -1,7 +1,7 @@
 class LoginPage {
     elements = {
         openApp: () => cy.visit("/login"),    //Cypress command to visit the quales landing page is cy.visit()
-        emailAddressInputField : () => cy.get('[data-testid="EmailAddress"]'),
+        emailAddressInputField : () => cy.get('[data-testid="EmailAddress"]'),    // .get used to spy on a particular web element
         passwordInputField : () => cy.get('[data-testid="Password"]'),
         loginBtn: () => cy.get('.MuiButton-contained'),
         logoutBtn: () => cy.contains('Log Out'),
@@ -13,7 +13,7 @@ class LoginPage {
     };
 
     typeCorrectEmailAddressAndCorrectPassword() {
-        this.elements.emailAddressInputField().type(Cypress.env("emailAddress"));    //.get used to spy on a particular web elemet. Then .type is used to tell cypress to type in the input on the field
+        this.elements.emailAddressInputField().type(Cypress.env("emailAddress"));    // .type is used to tell cypress to type in the input on the field
         this.elements.passwordInputField().type(Cypress.env("password"));
     };
 

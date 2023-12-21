@@ -7,8 +7,8 @@
 node_modules/
 dist/
 
-#exclude the cypress repository
-
+#exclude the cypress.config.js
+cypress.config.js
 
 # Compiled Java class files
 *.class
