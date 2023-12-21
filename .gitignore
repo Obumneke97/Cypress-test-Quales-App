@@ -7,8 +7,11 @@
 node_modules/
 dist/
 
-#exclude the cypress.config.js
-cypress.config.js
+#If you want to exclude the cypress.env.js file which is typically used to store sensitive information such as API keys or other configuration settings, you can use:
+cypress.env.js
+
+# If you want to ignore the entire cypress directory, you can use:
+#cypress/
 
 # Compiled Java class files
 *.class
