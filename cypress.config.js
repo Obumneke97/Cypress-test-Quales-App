@@ -26,6 +26,7 @@ module.exports = defineConfig({
     specPattern: "cypress/e2e/features/*.feature",
     baseUrl: "https://academy.quales.tech/",
     chromeWebSecurity: false,
+    
     env: {
       emailAddress: "ay@mail.com",
       password: "pass1234",
