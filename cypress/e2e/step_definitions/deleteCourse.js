@@ -5,7 +5,7 @@ Given ("A user is logged in and on the View Course page", () => {
     cy.get('[data-testid="EmailAddress"]').type("ay@mail.com");
     cy.get('[data-testid="Password"]').type("pass1234");
     cy.get('.MuiButton-contained').click();
-    cy.get(':nth-child(11) > .MuiCardMedia-root').click();
+    cy.get(':nth-child(3) > .MuiCardMedia-root').click();
 });
 
 When ("The user clicks on the Delete button", () => {

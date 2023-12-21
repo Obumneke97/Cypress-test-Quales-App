@@ -14,7 +14,12 @@ class EditCoursePage {
         backButton: () => cy.get('.MuiGrid-root > .MuiButtonBase-root'),
     }
 
+    
+
+
+
 }
+
 
 const courseDetails = {
     title: "try try try",
