@@ -18,17 +18,17 @@ jobs:
       - name: Run Cypress Tests
         run: npx cypress run
         env:
-           PASSWORD: ${{ secrets.PASSWORD }}
-           INCORRECTPASSWORD: ${{ secrets.INCORRECT_PASSWORD }}
-           EMAILADDRESS: ${{ secrets.EMAIL_ADDRESS }}
-           INCORRECTEMAILADDRESS: ${{ secrets.INCORRECT_EMAIL_ADDRESS }}
-           TITLE: ${{ secrets.TITLE }}
-           DESCRIPTION: ${{ secrets.DESCRIPTION }}
-           CATEGORY: ${{ secrets.CATEGORY }}
-           CATEGORY2: ${{ secrets.CATEGORY_2 }}
-           ISPREMIUM: ${{ secrets.ISPREMIUM }}
-           IMAGEURL: ${{ secrets.IMAGE_URL }}
-           LOCATION: ${{ secrets.LOCATION }}
-           COURSEURL: ${{ secrets.COURSE_URL }}
-           ADDRESS: ${{ secrets.ADDRESS }}
+           CYPRESS_PASSWORD: ${{ secrets.PASSWORD }}
+           CYPRESS_INCORRECTPASSWORD: ${{ secrets.INCORRECT_PASSWORD }}
+           CYPRESS_EMAILADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+           CYPRESS_INCORRECTEMAILADDRESS: ${{ secrets.INCORRECT_EMAIL_ADDRESS }}
+           CYPRESS_TITLE: ${{ secrets.TITLE }}
+           CYPRESS_DESCRIPTION: ${{ secrets.DESCRIPTION }}
+           CYPRESS_CATEGORY: ${{ secrets.CATEGORY }}
+           CYPRESS_CATEGORY2: ${{ secrets.CATEGORY_2 }}
+           CYPRESS_ISPREMIUM: ${{ secrets.ISPREMIUM }}
+           CYPRESS_IMAGEURL: ${{ secrets.IMAGE_URL }}
+           CYPRESS_LOCATION: ${{ secrets.LOCATION }}
+           CYPRESS_COURSEURL: ${{ secrets.COURSE_URL }}
+           CYPRESS_ADDRESS: ${{ secrets.ADDRESS }}
            
