@@ -26,14 +26,14 @@ class CreateCoursePage{
     };
 
     fillTheAddCourseFormWithMandatoryFields() {
-        this.elements.titleInputField().type("QA Zero to Hero");
-        this.elements.descriptionInputField().type("This course will enhance your skill set as a QA Professional");
+        this.elements.titleInputField().type(Cypress.env("TITLE"));
+        this.elements.descriptionInputField().type(Cypress.env("DESCRIPTION"));
         this.elements.categoryField().click();
-        this.elements.categoryDropdownBox().contains('Quality Assurance').click();
+        this.elements.categoryDropdownBox().contains(Cypress.env("CATEGORY")).click();
         this.elements.locationOnlineRadioBtn().click();
-        this.elements.courseURLInputField().type("https://www.youtube.com/@ThrottleHouse");
+        this.elements.courseURLInputField().type(Cypress.env("COURSEURL"));
         this.elements.locationOfflineRadioBtn().click();
-        this.elements.addressInputField().clear().type("1 Awolowo Road");
+        this.elements.addressInputField().clear().type(Cypress.env("ADDRESS"));
     };
 
     clickTheSubmitButton() {

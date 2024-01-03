@@ -17,7 +17,18 @@ jobs:
 
       - name: Run Cypress Tests
         run: npx cypress run
-        # env:
-        #   CYPRESS_password: ${{ secrets.TEST_PASSWORD }}
-        #   CYPRESS_incorrectPassword: ${{ secrets.INCORRECT_TEST_PASSWORD }}
-        #   CYPRESS_existingUsername: ${{ secrets.USERNAME }}
+         env:
+           PASSWORD: ${{ secrets.PASSWORD }}
+           INCORRECTPASSWORD: ${{ secrets.INCORRECT_PASSWORD }}
+           EMAILADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+           INCORRECTEMAILADDRESS: ${{ secrets.INCORRECT_EMAIL_ADDRESS }}
+           TITLE: ${{ secrets.TITLE }}
+           DESCRIPTION: ${{ secrets.DESCRIPTION }}
+           CATEGORY: ${{ secrets.CATEGORY }}
+           CATEGORY2: ${{ secrets.CATEGORY_2 }}
+           ISPREMIUM: ${{ secrets.ISPREMIUM }}
+           IMAGEURL: ${{ secrets.IMAGE_URL }}
+           LOCATION: ${{ secrets.LOCATION }}
+           COURSEURL: ${{ secrets.COURSE_URL }}
+           ADDRESS: ${{ secrets.ADDRESS }}
+           

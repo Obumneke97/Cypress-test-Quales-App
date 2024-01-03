@@ -13,18 +13,18 @@ class LoginPage {
     };
 
     typeCorrectEmailAddressAndCorrectPassword() {
-        this.elements.emailAddressInputField().type(Cypress.env("emailAddress"));    // .type is used to tell cypress to type in the input on the field
-        this.elements.passwordInputField().type(Cypress.env("password"));
+        this.elements.emailAddressInputField().type(Cypress.env("EMAILADDRESS"));    // .type is used to tell cypress to type in the input on the field
+        this.elements.passwordInputField().type(Cypress.env("PASSWORD"));
     };
 
     typeCorrectEmailAddressAndIncorrectPassword() {
-        this.elements.emailAddressInputField().type(Cypress.env("emailAddress"));
-        this.elements.passwordInputField().type(Cypress.env("incorrectPassword"));
+        this.elements.emailAddressInputField().type(Cypress.env("EMAILADDRESS"));
+        this.elements.passwordInputField().type(Cypress.env("INCORRECTPASSWORD"));
     };
 
     typeIncorrectEmailAddressAndCorrectPassword() {
-        this.elements.emailAddressInputField().type(Cypress.env("incorrectEmailAddress"));
-        this.elements.passwordInputField().type(Cypress.env("password"));
+        this.elements.emailAddressInputField().clear().type(Cypress.env("INCORRECTEMAILADDRESS"));
+        this.elements.passwordInputField().clear().type(Cypress.env("PASSWORD"));
     };
 
     clickLoginButton() {

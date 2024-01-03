@@ -28,10 +28,6 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     
     env: {
-      emailAddress: "ay@mail.com",
-      password: "pass1234",
-      incorrectEmailAddress: 'iay@mail.com',
-      incorrectPassword: 'PASS1234',
       allureReuseAfterSpec: true,
     },
     retries: {

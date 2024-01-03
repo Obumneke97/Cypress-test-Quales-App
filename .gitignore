@@ -7,7 +7,7 @@
 node_modules/
 dist/
 
-#If you want to exclude the cypress.env.js file which is typically used to store sensitive information such as API keys or other configuration settings, you can use:
+#If you want to exclude the cypress.env.json file (which is used to store sensitive information such as API keys or other configuration settings in this project), you can use:
 cypress.env.json
 
 # If you want to ignore the entire cypress directory, you can use:
