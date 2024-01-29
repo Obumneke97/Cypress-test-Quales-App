@@ -2,5 +2,5 @@ Feature: To ensure the Delete Course functionality works appropriately
 
     Scenario: To verify that an admin user is a able to delete a course successfully
     Given A user is logged in and on the View Course page
-    When The user clicks on the Delete button
+    When The user clicks on the Delete button and Confirms Delete
     Then Success notification toast should be displayed and user should be directed back to the List of Courses page

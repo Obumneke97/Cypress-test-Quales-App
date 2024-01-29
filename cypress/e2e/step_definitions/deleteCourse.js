@@ -1,21 +1,25 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import { loginPage } from "@pages/LoginPage";
+import { deleteCoursePage } from "@pages/DeleteCoursePage";
+import { createCoursePage } from "@pages/CreateCoursePage";
+
+let deletedCourseTitle;
 
 Given ("A user is logged in and on the View Course page", () => {
-    cy.visit('/login');
-    cy.get('[data-testid="EmailAddress"]').type("ay@mail.com");
-    cy.get('[data-testid="Password"]').type("pass1234");
-    cy.get('.MuiButton-contained').click();
-    cy.get(':nth-child(3) > .MuiCardMedia-root').click();
+    loginPage.visitQualesApp();
+    loginPage.typeCorrectEmailAddressAndCorrectPassword();
+    loginPage.clickLoginButton();
+    deleteCoursePage.clickOnTheTenthCourseCard();
 });
 
-When ("The user clicks on the Delete button", () => {
-    cy.get('.css-wvpqgg').click();
-    cy.get('.MuiBox-root > .MuiButton-contained').click();
+When ("The user clicks on the Delete button and Confirms Delete", () => {
+    createCoursePage.changeThePageView();
+    deleteCoursePage.getTitleOfCourseToBeDeleted(). then((title) => {
+        deletedCourseTitle = title;
+        deleteCoursePage.clickTheDeleteButtonAndConfirmDelete();
+    });
 });
 
 Then ("Success notification toast should be displayed and user should be directed back to the List of Courses page", () => {
-    cy.get('.Toastify__toast-body').should('be.visible').and('contain', "Course deleted successfully");
-    cy.url('includes', '/courses');
-    //need to ascertain that the deleted course is not still on list of courses
-    cy.contains('List of Courses').should('be.visible');
-});
+    deleteCoursePage.verifySuccessfulDeleteAndThatUserIsRedirectedToListOfCoursesPage(deletedCourseTitle);
+    });
