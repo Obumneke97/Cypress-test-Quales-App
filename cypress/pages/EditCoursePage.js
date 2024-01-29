@@ -14,7 +14,7 @@ class EditCoursePage {
         updateCourseBtn: () => cy.get('.css-tzsjye > .MuiButton-root'),
         backButton: () => cy.get('.MuiGrid-root > .MuiButtonBase-root'),
         loginSuccessfullToast: () => cy.contains('Login Successfull'),
-        fifthCourseCard: () => cy.get('.MuiPaper-elevation1').eq(1),
+        fifthCourseCard: () => cy.get('.MuiPaper-elevation1').eq(4),
         thirdCourseCard: () => cy.get('.MuiPaper-elevation1').eq(2),
         editButton: () => cy.contains('Edit'),
         editCoursePageUrl: () => cy.url('includes', '/courses/edit/'),
